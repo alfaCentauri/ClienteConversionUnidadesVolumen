@@ -32,13 +32,21 @@ public class ClienteConversionUnidadesVolumen {
         System.out.printf("%f galones son %f litros.\n", galones, galonesALitros(galones));
         System.out.printf("%f litros son %f galones.\n", litros, litrosAGalones(litros));
     }
-
+    /**
+     * LLama al servicio web para convertir galones a litros.
+     * @param galones   Tipo double.
+     * @return Tipo double.
+     */
     private static double galonesALitros(double galones) {
         convertirunidadesvolumen.ConvertirUnidadesVolumen_Service service = new convertirunidadesvolumen.ConvertirUnidadesVolumen_Service();
         convertirunidadesvolumen.ConvertirUnidadesVolumen port = service.getConvertirUnidadesVolumenPort();
         return port.galonesALitros(galones);
     }
-
+    /**
+     * LLama al servicio web para convertir litros a galones.
+     * @param litros   Tipo double.
+     * @return Tipo double.
+     */
     private static double litrosAGalones(double litros) {
         convertirunidadesvolumen.ConvertirUnidadesVolumen_Service service = new convertirunidadesvolumen.ConvertirUnidadesVolumen_Service();
         convertirunidadesvolumen.ConvertirUnidadesVolumen port = service.getConvertirUnidadesVolumenPort();
